@@ -1,21 +1,28 @@
 // import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { StrictMode, useState } from "react";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
+import themeContext from "./themeContext";
 
 const App = () => {
+  const theme = useState("#000137");
   return (
     <div>
-      <BrowserRouter>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-        </header>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
-      </BrowserRouter>
+      <StrictMode>
+        <themeContext.Provider value={theme}>
+          <BrowserRouter>
+            <header>
+              <Link to="/">Adopt Me!</Link>
+            </header>
+            <Routes>
+              <Route path="/details/:id" element={<Details />} />
+              <Route path="/" element={<SearchParams />} />
+            </Routes>
+          </BrowserRouter>
+        </themeContext.Provider>
+      </StrictMode>
     </div>
   );
 };
