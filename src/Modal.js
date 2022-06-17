@@ -8,7 +8,7 @@ const Modal = ({ children }) => {
   }
 
   useEffect(() => {
-    const modalRoot = document.getyElementById("modal");
+    const modalRoot = document.getElementById("modal");
     modalRoot.appendChild(elRef.current);
 
     return () => {
