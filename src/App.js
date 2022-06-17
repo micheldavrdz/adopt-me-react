@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { StrictMode, useState } from "react";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import themeContext from "./themeContext";
+import themeContext from "./ThemeContext";
 
 const App = () => {
   const theme = useState("#000137");

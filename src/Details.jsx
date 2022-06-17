@@ -2,7 +2,7 @@ import { Component } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
-import themeContext from "./themeContext";
+import themeContext from "./ThemeContext";
 import Modal from "./Modal";
 
 // Cant use hooks in class components (aka useEffect, useParams or anything that uses ´use´)
